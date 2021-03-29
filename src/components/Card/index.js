@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../Button'
 import Delete from '../Icons/Delete'
 import Edit from '../Icons/Edit'
 import styles from './style.module.scss'
 
 export default function Card() {
+  const [isSelected, setSelect] = useState(false)
+
+  function handleClick(e) {
+    e.preventDefault()
+    setSelect(!isSelected)
+  }
   return (
-    <div className={styles.item}>
-      <header className={styles.itemHeader}>
-        <h1 className={styles.title}>Title</h1>
+    <div className={styles.item} onClick={handleClick}>
+      <header
+        className={
+          isSelected === false ? styles.itemHeader : styles.itemHeaderfocus
+        }
+      >
+        <h1 className={isSelected === false ? styles.title : styles.titlefocus}>
+          Title
+        </h1>
         <Button>
           <Delete />
         </Button>
