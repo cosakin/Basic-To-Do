@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from '../Button'
+import Delete from '../Icons/Delete'
+import Edit from '../Icons/Edit'
 import styles from './style.module.scss'
 
 export default function Card() {
@@ -7,7 +9,9 @@ export default function Card() {
     <div className={styles.item}>
       <header className={styles.itemHeader}>
         <h1 className={styles.title}>Title</h1>
-        <Button>Delete</Button>
+        <Button>
+          <Delete />
+        </Button>
       </header>
       <div className={styles.info}>
         <div className={styles.infoArea}>
@@ -41,7 +45,9 @@ export default function Card() {
         </p>
       </div>
       <div className={styles.action}>
-        <Button>Edit</Button>
+        <Button>
+          <Edit />
+        </Button>
       </div>
     </div>
   )

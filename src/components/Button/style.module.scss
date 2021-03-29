@@ -1,8 +1,18 @@
 @import '../Styles/theme.scss';
 
 .btn {
-  padding: 0.4em 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0.8em;
+  border-radius: 0;
+  box-shadow: 1px 2px 4px rgba($color: #000000, $alpha: 0.25);
+  transition: 400ms;
   border: 1px solid $gray-dark;
-  font-size: 0.7em;
-  font-weight: 500;
+
+  &:hover {
+    box-shadow: 1px 2px 8px rgba($color: #000000, $alpha: 0.25),
+      1px 2px 4px rgba($color: #000000, $alpha: 0.25);
+    transition: 400ms;
+  }
 }
