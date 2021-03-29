@@ -22,6 +22,8 @@ npm run start
 
 **Voilà**
 
+Also see demo in [Vercel](https://basic-to-do.vercel.app/)
+
 ### Tools and Frameworks
 
 - [React](https://reactjs.org)
