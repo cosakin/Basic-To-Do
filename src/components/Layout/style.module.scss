@@ -1,0 +1,15 @@
+@import '../Styles/layout.scss';
+@import '../Styles/theme.scss';
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}

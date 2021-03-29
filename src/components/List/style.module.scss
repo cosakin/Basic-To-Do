@@ -1,0 +1,23 @@
+@import '../Styles/layout.scss';
+
+.list {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 0.5em;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+
+  @media screen and (max-width: $small) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+
+  @media screen and (min-width: $large) and (max-width: $extraLarge) and (orientation: 'landscape') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media screen and (min-width: $large) and (max-width: $extraLarge) and (orientation: 'portrait') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

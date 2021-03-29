@@ -1,0 +1,61 @@
+@import '../Styles/layout.scss';
+@import '../Styles/theme.scss';
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6em;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.25);
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0.5em 0;
+    color: $blue;
+  }
+}
+
+.info {
+  padding: 0 0 0.5em 0;
+  .infoArea {
+    display: flex;
+    justify-content: space-between;
+    div {
+      h2 {
+        font-size: 1em;
+        font-weight: 600;
+        color: $blue-light;
+        margin: 0.4em 0;
+      }
+
+      p {
+        font-size: 0.9em;
+        font-weight: 300;
+        margin: 0.1em 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.message {
+  padding: 0.3em 0;
+
+  p {
+    margin: 0;
+    color: $text-2;
+    font-weight: 300;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+}

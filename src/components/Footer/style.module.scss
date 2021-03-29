@@ -1,0 +1,10 @@
+@import '../Styles/layout.scss';
+@import '../Styles/theme.scss';
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $yellow;
+  padding: 1.2em 0;
+}
