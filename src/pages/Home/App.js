@@ -16,14 +16,14 @@ const App = (props) => {
     <>
       <Layout>
         {props.isLoading ? null : <UtiltyBar />}
-        <List>
-          {props.isLoading ? (
-            <h3 style={{ textAlign: 'center' }}>Loading</h3>
-          ) : props.fetchMessage ? (
-            <p>{props.fetchMessage}</p>
-          ) : (
-            [
-              item &&
+        {props.isLoading ? (
+          <h2 style={{ textAlign: 'center' }}>Loading</h2>
+        ) : props.fetchMessage ? (
+          <p>{props.fetchMessage}</p>
+        ) : (
+          [
+            <List>
+              {item &&
                 item.map((item) => (
                   <Card
                     key={item.title}
@@ -33,10 +33,10 @@ const App = (props) => {
                     priority={item.priority}
                     message={item.message}
                   />
-                )),
-            ]
-          )}
-        </List>
+                ))}
+            </List>,
+          ]
+        )}
       </Layout>
     </>
   )
